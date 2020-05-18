@@ -43,7 +43,10 @@ class CashRegister
     @total -= @last_transaction_price
     if @items != nil 
       @items.quantity.times do @items.pop
-      if @items.is_empty
+      if @items.is_empty?
+        total = 0.0 
+      end 
+    end
   end
     
   
