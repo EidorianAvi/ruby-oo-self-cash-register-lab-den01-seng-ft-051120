@@ -9,13 +9,12 @@ class CashRegister
     @discount = discount
     @total = 0
     @items = []
-    @transactions = []
   end
   
   def add_item title, price, quantity = 1
     @price = price
-    @transactions << price
     @total += price * quantity
+    @quantity = quantity
     if quantity > 1 
       n = 0 
       while n < quantity do 
@@ -41,7 +40,10 @@ class CashRegister
   
   
   def void_last_transaction
-     self.total = @total - @transactions.pop
+    @total -= @last_transaction_price
+    if @items != nil 
+      @items.quantity.times do @items.pop
+      if @items.is_empty
   end
     
   
