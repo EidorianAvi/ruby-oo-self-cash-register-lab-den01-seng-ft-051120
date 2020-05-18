@@ -40,7 +40,7 @@ class CashRegister
   
   def void_last_transaction
     @total -= @last_transactio_price
-    @items.pop(2)
+    if @items
     if @items.is_empty?
       @total = 0.0
     end
