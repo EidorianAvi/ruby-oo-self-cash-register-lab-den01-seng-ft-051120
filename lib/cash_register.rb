@@ -23,6 +23,8 @@ class CashRegister
     else 
       @items << title
     end
+    @last_transactio_price = price
+    @last_transaction_item = title
   end
   
   def apply_discount
@@ -37,12 +39,7 @@ class CashRegister
   
   
   def void_last_transaction
-    @total -= @price
-    
-    @items.pop
-    @items.pop
-    if @items
-    
+
   end
   
 end
