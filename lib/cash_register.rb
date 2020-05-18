@@ -43,8 +43,8 @@ class CashRegister
     @items.pop(2)
     if @items.is_empty?
       @total = 0.0
-      
-    binding.pry
+    end
+    # binding.pry
   end
     
   
