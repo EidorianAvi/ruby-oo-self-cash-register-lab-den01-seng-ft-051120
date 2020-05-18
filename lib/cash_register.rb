@@ -42,6 +42,8 @@ class CashRegister
     @items.pop
     @items.pop
     if @items.is_empty?
+      @total = 0.0 
+    end
       
     
     @total -= @last_transactio_price
