@@ -40,7 +40,7 @@ class CashRegister
   
   def void_last_transaction
     if @items != nil 
-      @items.quantity.times do items.pop
+      @items.quantity.times do @items.pop
       end
     elsif @item == nil
       @total == nil
