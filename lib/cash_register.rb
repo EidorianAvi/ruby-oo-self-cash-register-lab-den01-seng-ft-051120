@@ -23,7 +23,7 @@ class CashRegister
     else 
       @items << title
     end
-    @last_transactio_price = price
+    @last_transaction_price = price
     @last_transaction_item = title
   end
   
@@ -39,7 +39,7 @@ class CashRegister
   
   
   def void_last_transaction
-    @total -= @last_transactio_price
+    @total -= @last_transaction_price
     if @items
     if @items.is_empty?
       @total = 0.0
