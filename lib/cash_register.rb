@@ -43,7 +43,7 @@ class CashRegister
       @items.quantity.times do @items.pop
       end
     elsif @item == nil
-      @total == nil
+      @total == 0.0
     else
     @total -= @last_transactio_price
     end
