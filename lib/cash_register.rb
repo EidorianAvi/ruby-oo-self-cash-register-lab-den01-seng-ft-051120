@@ -40,11 +40,7 @@ class CashRegister
   
   def void_last_transaction
     @total -= @last_transaction_price
-    if @items
-    if @items.is_empty?
-      @total = 0.0
-    end
-    # binding.pry
+    
   end
     
   
